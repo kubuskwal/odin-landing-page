@@ -1,19 +1,133 @@
+:root {
+    --primary: #1F2937;
+    --secondary: #E5E7EB;
+    --cta: #3882F6;
+    --light: #F9FAF8;
+}
+
+/* RESETTING BROWSER STYLING */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 a {
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
 }
 
+p, li {
+    color: var(--secondary);
+    font-size: 18px;
+}
+
+/* Creating a gutter */
+section > * {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Adding background color to first sections */
+#header, #hero {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+/* HEADER SECTION */
+
+/* aligning the navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* width for logo */
+.logo {
+    max-width: 150px;
+}
+
+/* aligning the menu items */
+header ul {
+    list-style: none;
+    display: flex;
+    align-content: space-around;
+    gap: 20px;
+}
+
+/* adding color to nav links */
+header ul li a {
+    color: var(--secondary);
+}
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* HERO SECTION */
+
+
+#hero > div {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0 100px 0;
+}
+
+#hero > div > * {
+    flex: 1;
+}
+
+/* USP SECTION */
+
+#usp {
+    color: var(--primary);
+}
+
+#usp img {
+    max-width: 200px;
+}
+
+/* TESTIMONIAL SECTION */
+
+#testimonial {
+    background-color: var(--secondary);
+}
+
+/* GENERAL STYLING */
+
 h1 {
     font-size: 48px;
     font-weight: 900;
-    color: #f9faf8;
+    color: var(--light);
+}
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 7px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.btn.btn-primary {
+    background-color: var(--cta);
+    color: var(--light);
+}
+
+.btn.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--light);
+    color: var(--light);
 }
